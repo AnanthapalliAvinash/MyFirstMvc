@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MyFirstMvc.Models.Sample>
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<h3>All Product List</h3>  
+<table border="1" class="table table-bordered table-responsive">  
+    <thead>  
+        <tr class="btn-primary">  
+            <th>Product ID</th>  
+            <th>Product Name</th>  
+            <th>Order ID</th>  
+            <th>Quantity</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var item in Model)  
+        {  
+            <tr>  
+                <td>@item.ProductId</td>  
+                <td>@item.ProductName</td>  
+                <td>@item.OrderId</td>  
+                <td>@item.Quantity</td>  
+            </tr>  
+        }  
+    </tbody>  
+</table>  
